@@ -1,0 +1,20 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # URL Redirects für alte URLs (301 Permanent Redirects)
+  RewriteRule ^trading-journal/?$ / [R=301,L]
+  RewriteRule ^contact/?$ / [R=301,L]
+  RewriteRule ^start/?$ / [R=301,L]
+  RewriteRule ^trading-journal/de/?$ / [R=301,L]
+  RewriteRule ^kontakt/?$ / [R=301,L]
+  RewriteRule ^starter-guide/de/?$ /starter-guide [R=301,L]
+  RewriteRule ^starter-guide/en/?$ /en/starter-guide [R=301,L]
+  RewriteRule ^feedback/?$ / [R=301,L]
+  
+  # Handle client-side routing
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /index.html [L]
+</IfModule> 
