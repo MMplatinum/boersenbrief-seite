@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { TrendingUp, Play, ArrowRight, Star, Shield } from 'lucide-react';
+import { TrendingUp, Play, ArrowRight, Star, Shield, Check } from 'lucide-react';
 
 interface HeroProps {
   language?: 'de' | 'en';
@@ -8,23 +8,23 @@ interface HeroProps {
 
 const Hero = ({ language = 'de' }: HeroProps) => {
   const texts = language === 'de' ? {
-    headline: "Schluss mit Drawdown-Frust - mit diesem AI-Powered Tool zum profitablen Trader",
-    subtitle: "Das MMplatinum Trading Journal mit KI-Trading-Mentor und Auto-Sync bringt dich endlich ans Ziel.",
-    aiMentor: "Mit integriertem KI-Trading-Mentor und optionalem Broker-Auto-Sync",
-    ctaMain: "Nur kurze Zeit:",
-    ctaStrike: "348€/Jahr",
-    ctaPrice: "Lifetime-Zugang für nur 59€",
-    guarantee: "Ohne Risiko dank 14-Tage Geld-zurück-Garantie",
-    guaranteeMobile: "14-Tage Geld-zurück-Garantie"
+    headline: "Ihr Börsenerfolg startet hier.",
+    subtitle: "Verwirklichen Sie Ihre finanziellen Träume schneller als je zuvor - mit einer klaren Strategie, hohen Renditen und minimiertem Risiko.",
+    ctaTradingJournal: "Trading Journal",
+    ctaBoersenbriefe: "Börsenbriefe",
+    ratingText: "GEPRÜFTE LESERBEWERTUNGEN",
+    ratingBestnote: "BESTNOTE",
+    ratingLettertest: "Lettertest ✔",
+    ratingDate: "26.1.2024"
   } : {
-    headline: "End Drawdown Frustration - this Tool Makes You a Profitable Trader",
-    subtitle: "MMplatinum Trading Journal – with AI Trading Mentor and auto-sync – finally gets you to your goal.",
-    aiMentor: "With integrated AI Trading Mentor and optional Broker Auto-Sync",
-    ctaMain: "Limited time offer:",
-    ctaStrike: "$348/year",
-    ctaPrice: "Lifetime access for only $69",
-    guarantee: "Risk-free with 14-day money-back guarantee",
-    guaranteeMobile: "14-day money-back guarantee"
+    headline: "Your Stock Market Success Starts Here.",
+    subtitle: "Realize your financial dreams faster than ever before - with a clear strategy, high returns and minimized risk.",
+    ctaTradingJournal: "Trading Journal",
+    ctaBoersenbriefe: "Stock Letters",
+    ratingText: "VERIFIED READER REVIEWS",
+    ratingBestnote: "BEST RATING",
+    ratingLettertest: "Lettertest ✔",
+    ratingDate: "26.1.2024"
   };
 
   return (
@@ -36,203 +36,164 @@ const Hero = ({ language = 'de' }: HeroProps) => {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[32rem] h-[32rem] bg-gradient-to-r from-blue-50/30 to-purple-50/30 rounded-full blur-3xl"></div>
       </div>
 
-      <div className="relative section-container pt-20 pb-24 lg:pt-32 lg:pb-40">
-        <div className="text-center">
-          {/* Pre-Headline Badge */}
-          <motion.div 
-            initial={{ opacity: 0, y: 15 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ 
-              duration: window.innerWidth >= 768 ? 0.8 : 0,
-              ease: "easeOut"
-            }} 
-            className="mb-6 md:mb-8 flex justify-center"
-          >
-            <div className="bg-gradient-to-r from-purple-50/70 to-blue-50/70 border border-purple-200/30 rounded-full px-2 md:px-4 py-1.5 md:py-2 shadow-sm backdrop-blur-sm">
-              <p className="text-purple-600 font-medium text-center text-xs md:text-sm">
-                {language === 'de' ? 'Für Trader, die nachhaltig profitabel werden möchten' : 'For traders who want to become consistently profitable'}
-              </p>
-            </div>
-          </motion.div>
-
-          {/* Professional Heading */}
-          <motion.h1 
-            initial={{ opacity: 0, y: 30 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ 
-              duration: window.innerWidth >= 768 ? 0.8 : 0,
-              ease: "easeOut"
-            }} 
-            className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-4 tracking-tight leading-none md:leading-tight"
-          >
-            <span className="block md:hidden">
-              {language === 'de' ? (
-                <>
-                  Schluss mit Drawdown-Frust -
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent font-semibold">
-                    mit diesem AI-Powered Tool zum profitablen Trader
-                  </span>
-                </>
-              ) : (
-                <>
-                  End Drawdown Frustration -
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent font-semibold">
-                    This AI-Powered Tool Makes You<br />
-                    a Profitable Trader
-                  </span>
-                </>
-              )}
-            </span>
-            <span className="hidden md:block">
-              {language === 'de' ? (
-                <>
-                  Schluss mit Drawdown-Frust -
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent font-semibold">
-                    mit diesem AI-Powered Tool zum profitablen Trader
-                  </span>
-                </>
-              ) : (
-                <>
-                  End Drawdown Frustration -
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent font-semibold">
-                    This AI-Powered Tool Makes You<br />
-                    a Profitable Trader
-                  </span>
-                </>
-              )}
-            </span>
-          </motion.h1>
-
-          {/* Clean Subtitle */}
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ 
-              duration: window.innerWidth >= 768 ? 0.8 : 0,
-              delay: window.innerWidth >= 768 ? 0.2 : 0,
-              ease: "easeOut"
-            }} 
-            className="text-lg md:text-xl text-gray-600 mb-12 md:mb-16 max-w-4xl mx-auto font-light leading-snug md:leading-relaxed"
-          >
-            <span className="block md:hidden">{texts.subtitle}</span>
-            <span className="hidden md:inline">
-              {language === 'de' ? (
-                <>
-                  Das MMplatinum Trading Journal mit KI-Trading-Mentor und Auto-Sync<br />
-                  bringt dich endlich ans Ziel.
-                </>
-              ) : (
-                <>
-                  MMplatinum Trading Journal – with AI Trading Mentor and auto-sync –<br />
-                  finally gets you to your goal.
-                </>
-              )}
-            </span>
-          </motion.p>
-
-
-
-          {/* Professional CTA */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ 
-              duration: window.innerWidth >= 768 ? 0.8 : 0,
-              delay: window.innerWidth >= 768 ? 0.6 : 0,
-              ease: "easeOut"
-            }} 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-2"
-          >
-            <a 
-              href={language === 'en' 
-                ? "https://mmplatinum-en.lemonsqueezy.com/buy/077ca090-7616-4201-82f7-fdf2ebc67d5d?desc=0"
-                : "https://mmplatinum.lemonsqueezy.com/buy/edea0b8b-869d-4964-b413-1600e031e96c?desc=0"
-              }
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group relative bg-gradient-to-r from-blue-600 to-purple-600 text-white px-7 py-3.5 md:px-9 md:py-4.5 rounded-xl font-medium text-base md:text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 overflow-hidden inline-flex items-center"
+      <div className="relative section-container pt-40 pb-24 lg:pt-48 lg:pb-40">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+          {/* Left Side - Text and CTAs */}
+          <div className="text-left">
+            {/* Professional Heading */}
+            <motion.h1 
+              initial={{ opacity: 0, y: 30 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ 
+                duration: window.innerWidth >= 768 ? 0.8 : 0,
+                ease: "easeOut"
+              }} 
+              className="text-4xl md:text-5xl lg:text-6xl font-medium text-gray-900 mb-6 tracking-tight leading-none md:leading-tight"
             >
-              {/* Animated Shimmer Effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform -skew-x-12 translate-x-[-100%] animate-[shimmer_4s_ease-in-out_infinite] pointer-events-none"></div>
-              
-              {/* Button Shine Effect on Hover */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
-              
-              {/* Mobile Version - Two Lines */}
-              <span className="relative z-10 flex flex-col items-center text-center md:hidden">
-                <span className="text-sm font-normal mb-1">
-                  {texts.ctaMain} <span className="line-through opacity-75">{texts.ctaStrike}</span>
+              <span className="block md:hidden">
+                Ihr Börsenerfolg{' '}
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent font-semibold">
+                  startet hier.
                 </span>
-                <span className="flex items-center space-x-2 font-semibold">
-                  <span>{texts.ctaPrice}</span>
+              </span>
+              <span className="hidden md:block">
+                Ihr Börsenerfolg{' '}
+                <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-700 bg-clip-text text-transparent font-semibold">
+                  startet hier.
+                </span>
+              </span>
+            </motion.h1>
+
+            {/* Clean Subtitle */}
+            <motion.p 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ 
+                duration: window.innerWidth >= 768 ? 0.8 : 0,
+                delay: window.innerWidth >= 768 ? 0.2 : 0,
+                ease: "easeOut"
+              }} 
+              className="text-lg md:text-xl text-gray-600 mb-8 font-light leading-snug md:leading-relaxed"
+            >
+              {texts.subtitle}
+            </motion.p>
+
+            {/* Professional CTA Buttons */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ 
+                duration: window.innerWidth >= 768 ? 0.8 : 0,
+                delay: window.innerWidth >= 768 ? 0.4 : 0,
+                ease: "easeOut"
+              }} 
+              className="flex flex-col sm:flex-row gap-4 mb-8"
+            >
+              {/* Trading Journal Button */}
+              <a 
+                href="#"
+                className="group relative bg-gradient-to-r from-purple-600 to-purple-700 text-white px-6 py-3 md:px-8 md:py-3.5 rounded-lg font-normal text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-purple-500/25 overflow-hidden inline-flex items-center justify-center"
+              >
+                {/* Animated Shimmer Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform -skew-x-12 translate-x-[-100%] animate-[shimmer_4s_ease-in-out_infinite] pointer-events-none"></div>
+                
+                {/* Button Shine Effect on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+                
+                <span className="relative z-10 flex items-center space-x-2">
+                  <span>{texts.ctaTradingJournal}</span>
                   <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </span>
-              </span>
-              
-              {/* Desktop Version - Single Line */}
-              <span className="relative z-10 hidden md:flex items-center space-x-2 whitespace-nowrap">
-                <span>{texts.ctaMain} <span className="line-through opacity-75 mr-2">{texts.ctaStrike}</span> {texts.ctaPrice}</span>
-                <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
-              </span>
-            </a>
-          </motion.div>
+              </a>
 
-          <motion.p 
-            initial={{ opacity: 0, y: 10 }} 
-            animate={{ opacity: 1, y: 0 }} 
+              {/* Börsenbriefe Button */}
+              <a 
+                href="#"
+                className="group relative bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 md:px-8 md:py-3.5 rounded-lg font-normal text-sm md:text-base transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/25 overflow-hidden inline-flex items-center justify-center"
+              >
+                {/* Animated Shimmer Effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent transform -skew-x-12 translate-x-[-100%] animate-[shimmer_4s_ease-in-out_infinite] pointer-events-none"></div>
+                
+                {/* Button Shine Effect on Hover */}
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-700"></div>
+                
+                <span className="relative z-10 flex items-center space-x-2">
+                  <span>{texts.ctaBoersenbriefe}</span>
+                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                </span>
+              </a>
+            </motion.div>
+
+            {/* Social Proof - Rating Section */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ 
+                duration: window.innerWidth >= 768 ? 0.8 : 0,
+                delay: window.innerWidth >= 768 ? 0.6 : 0,
+                ease: "easeOut"
+              }} 
+              className="flex items-center space-x-4"
+            >
+              {/* Profile Pictures */}
+              <div className="flex -space-x-2">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 border-2 border-white shadow-sm"></div>
+                ))}
+              </div>
+
+              {/* Stars */}
+              <div className="flex items-center space-x-1">
+                {[1, 2, 3, 4, 5].map((i) => (
+                  <Star key={i} size={16} className="fill-yellow-400 text-yellow-400" />
+                ))}
+              </div>
+
+              {/* Rating Badge */}
+              <div className="bg-blue-50 border border-blue-200 rounded-full px-4 py-2 text-center">
+                <div className="text-xs font-medium text-blue-800 mb-1">{texts.ratingText}</div>
+                <div className="text-sm font-bold text-blue-900 mb-1">{texts.ratingBestnote}</div>
+                <div className="flex justify-center space-x-1 mb-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Check key={i} size={12} className="text-yellow-500" />
+                  ))}
+                </div>
+                <div className="text-xs text-blue-700">
+                  {texts.ratingLettertest} {texts.ratingDate}
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* Right Side - Image */}
+          <motion.div 
+            initial={{ opacity: 0, x: 40 }} 
+            animate={{ opacity: 1, x: 0 }} 
             transition={{ 
-              duration: window.innerWidth >= 768 ? 0.8 : 0,
+              duration: window.innerWidth >= 768 ? 1.0 : 0,
               delay: window.innerWidth >= 768 ? 0.8 : 0,
               ease: "easeOut"
             }} 
-            className="text-gray-500 mb-16 md:mb-32 text-base"
-          >
-            {/* Mobile Version - Compact with icon */}
-            <span className="md:hidden flex items-center justify-center space-x-2">
-              <Shield size={16} className="text-green-600" />
-              <span>{texts.guaranteeMobile}</span>
-            </span>
-            
-            {/* Desktop Version - With icon */}
-            <span className="hidden md:flex items-center justify-center space-x-2">
-              <Shield size={16} className="text-green-600" />
-              <span>{texts.guarantee}</span>
-            </span>
-          </motion.p>
-
-          {/* Clean Product Mockup */}
-          <motion.div 
-            initial={{ opacity: 0, y: 40 }} 
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ 
-              duration: window.innerWidth >= 768 ? 1.0 : 0,
-              delay: window.innerWidth >= 768 ? 1.0 : 0,
-              ease: "easeOut"
-            }} 
-            className="relative max-w-5xl mx-auto"
+            className="relative flex justify-center lg:justify-end"
           >
             <div className="relative group">
               {/* Strong Purple Glow Effect - Multiple Layers */}
-              {/* Mobile: Very compact but intense glow */}
-              <div className="absolute -inset-2 md:-inset-8 bg-gradient-to-r from-purple-500/60 via-blue-500/50 to-purple-600/60 md:from-purple-500/40 md:via-blue-500/30 md:to-purple-600/40 rounded-3xl blur-xl md:blur-3xl opacity-90 md:opacity-80 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <div className="absolute -inset-1 md:-inset-6 bg-gradient-to-r from-purple-400/50 via-pink-400/40 to-purple-500/50 md:from-purple-400/30 md:via-pink-400/20 md:to-purple-500/30 rounded-3xl blur-lg md:blur-2xl opacity-95 md:opacity-90 group-hover:opacity-100 transition-opacity duration-700"></div>
-              <div className="absolute inset-0 md:-inset-4 bg-gradient-to-r from-purple-600/70 via-purple-500/60 to-blue-600/50 md:from-purple-600/50 md:via-purple-500/40 md:to-blue-600/30 rounded-3xl blur-md md:blur-xl opacity-80 md:opacity-70 group-hover:opacity-90 transition-opacity duration-700"></div>
+              <div className="absolute -inset-2 md:-inset-8 bg-gradient-to-r from-purple-500/60 via-blue-500/50 to-purple-600/60 md:from-purple-500/40 md:via-blue-500/30 md:to-purple-600/40 rounded-full blur-xl md:blur-3xl opacity-90 md:opacity-80 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute -inset-1 md:-inset-6 bg-gradient-to-r from-purple-400/50 via-pink-400/40 to-purple-500/50 md:from-purple-400/30 md:via-pink-400/20 md:to-purple-500/30 rounded-full blur-lg md:blur-2xl opacity-95 md:opacity-90 group-hover:opacity-100 transition-opacity duration-700"></div>
+              <div className="absolute inset-0 md:-inset-4 bg-gradient-to-r from-purple-600/70 via-purple-500/60 to-blue-600/50 md:from-purple-600/50 md:via-purple-500/40 md:to-blue-600/30 rounded-full blur-md md:blur-xl opacity-80 md:opacity-70 group-hover:opacity-90 transition-opacity duration-700"></div>
               
-              <div className="relative bg-white/80 backdrop-blur-sm p-0 rounded-2xl shadow-2xl group-hover:shadow-3xl hover:shadow-purple-500/20 transition-all duration-500 overflow-hidden">
-                  <div className="rounded-2xl overflow-hidden">
-                    <img 
-                      src="/images/dashboarddark.webp" 
-                      alt="MMplatinum Trading Journal Dashboard - Das professionelle Trading Journal für erfolgreiche Trader" 
-                      loading="eager"
-                      fetchPriority="high"
-                      decoding="async"
-                      className="w-full h-auto object-cover"
-                    />
+              <div className="relative bg-white/80 backdrop-blur-sm p-4 rounded-full shadow-2xl group-hover:shadow-3xl hover:shadow-purple-500/20 transition-all duration-500 overflow-hidden w-64 h-64 md:w-80 md:h-80">
+                <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-blue-50 to-purple-50 flex items-center justify-center">
+                  {/* Placeholder for the professional man image */}
+                  <div className="w-48 h-48 md:w-60 md:h-60 rounded-full bg-gradient-to-br from-gray-200 to-gray-300 flex items-center justify-center">
+                    <div className="text-gray-500 text-center">
+                      <div className="w-32 h-32 md:w-40 md:h-40 rounded-full bg-gradient-to-br from-blue-100 to-purple-100 mx-auto mb-2 flex items-center justify-center">
+                        <div className="text-4xl">👨‍💼</div>
+                      </div>
+                      <div className="text-xs">Professioneller Trader</div>
+                    </div>
                   </div>
+                </div>
               </div>
             </div>
           </motion.div>

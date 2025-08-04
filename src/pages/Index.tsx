@@ -1,7 +1,15 @@
-import React, { useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
+import Statistics from '../components/Statistics';
+import BoersenbriefeSection from '../components/BoersenbriefeSection';
+import InvestmentApproaches from '../components/InvestmentApproaches';
+import InvestmentHighlights from '../components/InvestmentHighlights';
+import ServicesSection from '../components/ServicesSection';
+import CustomerTestimonials from '../components/CustomerTestimonials';
+import EmotionsSection from '../components/EmotionsSection';
+import MMplatinumBenefits from '../components/MMplatinumBenefits';
 import InstrumentsSlider from '../components/InstrumentsSlider';
 import Features from '../components/Features';
 import JournalComparison from '../components/JournalComparison';
@@ -25,43 +33,46 @@ import FinalCTA from '../components/FinalCTA';
 import Footer from '../components/Footer';
 import SocialProofWidget from '../components/SocialProofWidget';
 
-const Index = () => {
-  useEffect(() => {
-    document.title = "MMplatinum Trading Journal: Analysieren & Erfolgreicher Traden";
-  }, []);
+const queryClient = new QueryClient();
 
+const Index = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.8 }}
-      className="min-h-screen bg-white"
-    >
-      <Navigation />
-      <Hero />
-      <InstrumentsSlider language="de" />
-      <Features />
-      <JournalComparison />
-      <ExpertQuotes language="de" />
-      <MockupBundle />
-      <TargetAudience />
-      <FounderQuote />
-      <TopFeatures />
-      <AITradingMentor />
-      <ProductShowcase />
-      <SyncEAShowcase />
-      <Testimonials />
-      <ResultsShowcase />
-      <SimplicityCTA />
-      <WhyChooseUs />
-      <Pricing />
-      <MoneyBackGuarantee />
-      <AboutFounder />
-      <FAQ />
-      <FinalCTA />
-      <Footer />
-      <SocialProofWidget />
-    </motion.div>
+    <QueryClientProvider client={queryClient}>
+      <div className="min-h-screen bg-white">
+        <Navigation />
+        <Hero />
+        <Statistics />
+        <BoersenbriefeSection />
+        <InvestmentApproaches />
+        <InvestmentHighlights />
+        <ServicesSection />
+        <CustomerTestimonials />
+        <EmotionsSection />
+        <MMplatinumBenefits />
+        <InstrumentsSlider language="de" />
+        <Features />
+        <JournalComparison />
+        <ExpertQuotes language="de" />
+        <MockupBundle />
+        <TargetAudience />
+        <FounderQuote />
+        <TopFeatures />
+        <AITradingMentor />
+        <ProductShowcase />
+        <SyncEAShowcase />
+        <Testimonials />
+        <ResultsShowcase />
+        <SimplicityCTA />
+        <WhyChooseUs />
+        <Pricing />
+        <MoneyBackGuarantee />
+        <AboutFounder />
+        <FAQ />
+        <FinalCTA />
+        <Footer />
+        <SocialProofWidget />
+      </div>
+    </QueryClientProvider>
   );
 };
 

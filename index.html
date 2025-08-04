@@ -2,166 +2,28 @@
 <html lang="de">
   <head>
     <meta charset="UTF-8" />
-    <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6d528d0e-8f8a-4c96-a57d-7f301015f140" type="text/javascript"></script>
-    <!-- Google Tag Manager -->
-    <script>
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-PZJJRPSZ');
-    </script>
-    <!-- End Google Tag Manager -->
-    <!-- Signals Gateway Pixel Code -->
-    <script>
-      !function(a,h,e,v,n,t,s)
-      {if(a.cbq)return;n=a.cbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!a._cbq)a._cbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=h.createElement(e);t.async=!0;
-      t.src=v;s=h.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://sgw.stape.ltd/sdk/5636879438097831764/events.js');
-      cbq('setHost', 'https://sgw.stape.ltd/');
-      cbq('init', '5636879438097831764');
-      cbq('track', 'PageView');
-    </script>
-    <!-- End Signals Gateway Pixel Code -->
-    <!-- FBCLID → _fbc-Konverter -->
-    <script>
-      (function () {
-        const params  = new URLSearchParams(window.location.search);
-        const fbclid  = params.get('fbclid') || localStorage.getItem('fbclid');
-        if (!fbclid) return;
-
-        /* _fbc-Cookie & Storage wie oben */
-        const ts  = Math.floor(Date.now() / 1000);
-        const fbc = 'fb.1.' + ts + '.' + fbclid;
-        window.addEventListener('cookie_consent_marketing', () => {
-          document.cookie = `_fbc=${fbc}; path=/; domain=.mmplatinum.com; max-age=${90*24*60*60}`;
-        }, { once:true });
-        sessionStorage.setItem('fbclid', fbclid);
-        localStorage .setItem('fbclid', fbclid);
-
-        /* ---- Checkout-Link mit fbclid bestücken ---- */
-        const btn = document.querySelector('#checkout-btn');    // ID anpassen
-        if (btn) {
-          btn.addEventListener('click', e => {
-            /* falls Link bereits target="_blank" hat, bleibt new Tab erhalten */
-            btn.href += (btn.href.includes('?') ? '&' : '?') + 'fbclid=' + fbclid;
-          });
-        }
-      })();
-    </script>
-    <!-- End FBCLID → _fbc-Konverter -->
-
-    <!-- Lemon Squeezy Affiliate Tracking -->
-    <script>window.lemonSqueezyAffiliateConfig = { store: "mmplatinum" };</script>
-    <script src="https://lmsqueezy.com/affiliate.js" defer></script>
-    <!-- Lemon Squeezy Affiliate Tracking EN -->
-    <script>window.lemonSqueezyAffiliateConfig = { store: "mmplatinum-en" };</script>
-    <script src="https://lmsqueezy.com/affiliate.js" defer></script>
-
-    <!-- Microsoft Clarity -->
-    <script type="text/javascript">
-        (function(c,l,a,r,i,t,y){
-            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-        })(window, document, "clarity", "script", "s82m38r2s8");
-    </script>
-    <!-- End Microsoft Clarity -->
-
-    <!-- Hotjar Tracking Code for https://mmplatinum.com -->
-    <script>
-        (function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:6451508,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
-    </script>
-    <!-- End Hotjar Tracking Code -->
-
-    <meta name="google-site-verification" content="fMnbbJAvEx49U4Wkp76QRfSQCevE6l4pnCfsDBgYaQo"/>
-    <meta name="trustpilot-one-time-domain-verification-id" content="b2ee9469-f331-490f-a166-6d72f6a4e924"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MMplatinum Trading Journal: Analysieren & Erfolgreicher Traden</title>
-    <meta name="description" content="Das ultimative Trading Journal für professionelle Trader. Verbessere deine Trading Performance mit unserem professionellen Trading Journal. Mit Lifetime-Zugang." />
-    <meta name="keywords" content="Trading Journal, professionelles Trading Journal, MMplatinum Trading Journal, Trading Software, Trade Tracking, Trading Performance, Trading Analyse" />
-    <meta name="author" content="MMplatinum" />
+    <title>Börsenbrief Website</title>
+    <meta name="description" content="Eine moderne Website für einen Börsenbrief" />
+    <meta name="keywords" content="Börsenbrief, Trading, Investment" />
+    <meta name="author" content="Börsenbrief" />
     <meta name="robots" content="index, follow" />
-    <link rel="canonical" href="https://mmplatinum.com" />
 
-    <!-- Open Graph Tags für Trading Journal -->
-    <meta property="og:title" content="Trading Journal von MMplatinum - Das professionelle Trading Journal für erfolgreiche Trader" />
-    <meta property="og:description" content="Das ultimative Trading Journal für professionelle Trader. Verbessere deine Trading Performance mit unserem professionellen Trading Journal. Mit Lifetime-Zugang." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mmplatinum.com" />
-    <meta property="og:image" content="https://mmplatinum.com/og-image.png" />
-    <meta property="og:image:alt" content="MMplatinum Trading Journal Dashboard - Professionelles Trading Journal für Trader" />
-    <meta property="og:site_name" content="MMplatinum Trading Journal" />
-    <meta property="og:locale" content="de_DE" />
-
-    <!-- Twitter Cards für Trading Journal -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Trading Journal von MMplatinum - Das professionelle Trading Journal" />
-    <meta name="twitter:description" content="Das ultimative Trading Journal für professionelle Trader. Verbessere deine Trading Performance mit unserem professionellen Trading Journal. Mit Lifetime-Zugang." />
-    <meta name="twitter:image" content="https://mmplatinum.com/og-image.png" />
-    <meta name="twitter:image:alt" content="MMplatinum Trading Journal Dashboard" />
-
-    <!-- Schema.org Structured Data für Trading Journal -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "MMplatinum Trading Journal",
-      "applicationCategory": "FinanceApplication",
-      "description": "Professionelles Trading Journal für Trader zur Analyse und Verbesserung der Trading Performance",
-      "operatingSystem": "Web",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "EUR",
-        "description": "Kostenloser Test verfügbar"
-      },
-      "creator": {
-        "@type": "Organization",
-        "name": "MMplatinum"
-      },
-      "keywords": "Trading Journal, Trading Software, Trade Tracking, Trading Performance",
-      "url": "https://mmplatinum.com"
-    }
-    </script>
-    
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="shortcut icon" type="image/png" href="/images/favicon.png" />
     <link rel="apple-touch-icon" href="/images/favicon.png" />
     
     <!-- DNS-Prefetch für externe Domains (Performance-Boost) -->
-    <link rel="dns-prefetch" href="//consent.cookiebot.com">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="dns-prefetch" href="//sgw.stape.ltd">
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     
     <!-- Preconnect für wichtige Ressourcen -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdn.gpteng.co" crossorigin>
-    <link rel="preconnect" href="https://sgw.stape.ltd">
     
     <!-- Google Fonts mit Display-Optimierung -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Performance Optimierungen -->
-    <link rel="dns-prefetch" href="//www.mmplatinum.com">
-    
-    <!-- Preload des wichtigsten Hero-Bildes (KORRIGIERT: .webp statt .PNG) -->
-    <link rel="preload" as="image" href="/images/dashboarddark.webp" fetchpriority="high">
     
     <!-- Critical CSS für Above-the-Fold Content -->
     <style>
@@ -209,13 +71,7 @@
   </head>
 
   <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PZJJRPSZ"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
