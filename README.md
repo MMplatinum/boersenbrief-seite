@@ -1,6 +1,6 @@
-# Boersenbrief Website
+# Börsenbrief Website
 
-Eine moderne Website für einen Börsenbrief, basierend auf React, TypeScript und Tailwind CSS.
+Eine moderne Website für einen Börsenbrief, entwickelt mit React, TypeScript und Tailwind CSS.
 
 ## Projekt-Info
 
@@ -57,7 +57,7 @@ Das Projekt kann auf verschiedenen Plattformen deployed werden:
 - Vercel
 - Netlify
 - GitHub Pages
-- IONOS (über GitHub Actions)
+- IONOS
 
 ## Lizenz
 
