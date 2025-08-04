@@ -1,73 +1,64 @@
-# Welcome to your Lovable project
+# Boersenbrief Website
 
-## Project info
+Eine moderne Website für einen Börsenbrief, basierend auf React, TypeScript und Tailwind CSS.
 
-**URL**: https://lovable.dev/projects/dfad1451-d78f-4c0d-8465-5f529b624e12
+## Projekt-Info
 
-## How can I edit this code?
+**Technologien:**
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- shadcn/ui Komponenten
+- React Router DOM
 
-There are several ways of editing your application.
+## Entwicklung
 
-**Use Lovable**
+### Voraussetzungen
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/dfad1451-d78f-4c0d-8465-5f529b624e12) and start prompting.
+- Node.js (Version 18 oder höher)
+- npm oder bun
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+```bash
+# Dependencies installieren
+npm install
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Entwicklungsserver starten
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### Build
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```bash
+# Produktions-Build erstellen
+npm run build
 
-**Use GitHub Codespaces**
+# Development-Build erstellen
+npm run build:dev
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Projektstruktur
 
-## What technologies are used for this project?
+```
+src/
+├── components/     # React Komponenten
+├── pages/         # Seiten-Komponenten
+├── hooks/         # Custom React Hooks
+├── lib/           # Utility Funktionen
+└── ui/            # UI Komponenten (shadcn/ui)
+```
 
-This project is built with:
+## Deployment
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Das Projekt kann auf verschiedenen Plattformen deployed werden:
 
-## How can I deploy this project?
+- Vercel
+- Netlify
+- GitHub Pages
+- IONOS (über GitHub Actions)
 
-Simply open [Lovable](https://lovable.dev/projects/dfad1451-d78f-4c0d-8465-5f529b624e12) and click on Share -> Publish.
+## Lizenz
 
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Privat - Alle Rechte vorbehalten
